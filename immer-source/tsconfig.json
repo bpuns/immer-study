@@ -1,0 +1,29 @@
+{
+  "compilerOptions": {
+    "outDir": "./build", // 打包输出路径
+    "experimentalDecorators": true,
+    "target": "ESNext",
+    "downlevelIteration": true,
+    "useDefineForClassFields": false,
+    "noImplicitAny": false,
+    "allowJs": true,
+    "skipLibCheck": true,
+    "allowSyntheticDefaultImports": true,
+    "strict": true,
+    "forceConsistentCasingInFileNames": true,
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "isolatedModules": false,
+    "esModuleInterop": true,
+    "jsx": "react",
+    "declaration": false,
+    "lib": [
+      "DOM",
+      "DOM.Iterable",
+      "ESNext"
+    ],
+  },
+  "include": [
+    "./src/*"
+  ]
+}

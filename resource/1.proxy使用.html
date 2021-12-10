@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+
+    const obj = {
+      a: 'a',
+      b: 'b',
+      c: 'c'
+    }
+
+    const proxyObj = new Proxy(obj, {
+      get(state, key) {
+        console.log(`获取了${key}`)
+        return Reflect.get(state, key)
+      },
+      set(state, key, value) {
+        console.log(`${key}值发生了变化，变成了${value}`)
+        return Reflect.set(state, key, value)
+      },
+      deleteProperty(state, key) {
+        console.log(`${key}被删除了`)
+        return Reflect.deleteProperty(state, key)
+      }
+    })
+
+    proxyObj.a = 'a-1'
+    proxyObj.b
+    delete proxyObj.b
+
+  </script>
+</body>
+
+</html>
