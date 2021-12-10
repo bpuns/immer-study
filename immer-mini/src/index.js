@@ -74,4 +74,5 @@ const nextState = produce(baseState, (draft) => {
 
 })
 
+console.log(JSON.stringify(baseState, null, 2))
 console.log(JSON.stringify(nextState, null, 2))
